@@ -1,4 +1,5 @@
 import argparse
+import logging
 
 from part1 import solve_part1
 # from part2 import solve_part2
@@ -22,8 +23,16 @@ parser.add_argument(
     help="The part of the puzzle to solve",
     required=True,
 )
+parser.add_argument(
+    "-d",
+    "--debug",
+    action="store_true",
+    help="Enable debug output",
+)
 
 args = parser.parse_args()
+if args.debug:
+    logging.basicConfig(level=logging.DEBUG)
 
 with open(args.input_file) as f:
     if args.part == "1":
