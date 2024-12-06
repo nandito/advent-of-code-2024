@@ -2,7 +2,7 @@ import argparse
 import logging
 
 from part1 import solve_part1
-# from part2 import solve_part2
+from part2 import solve_part2
 
 parser = argparse.ArgumentParser(
     description="Advent of Code 2024 - Day 5",
@@ -38,8 +38,8 @@ if args.debug:
 with open(args.input_file) as f:
     if args.part == "1":
         solve_part1(f)
-    # elif args.part == "2":
-    #     solve_part2(f)
+    elif args.part == "2":
+        solve_part2(f)
     else:
         print("Invalid part specified")
         exit(1)
